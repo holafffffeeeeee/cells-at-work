@@ -31,6 +31,6 @@ public class playercontoller : MonoBehaviour
     public void OnCanvas()
     {
        canvas.SetActive(false);
-    moveSpeed = 1f;
+    moveSpeed = 5f;
     }
 }
