@@ -7,6 +7,11 @@ public class playercontoller : MonoBehaviour
     public InputActionAsset inputActions;
    private Vector2 move;
     private Rigidbody2D rb;
+   public GameObject canvas;
+    private void Start()
+    {
+        moveSpeed = 0f;
+    }
     public void OnMove(InputAction.CallbackContext context)
     {
 
@@ -22,5 +27,10 @@ public class playercontoller : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + move * (moveSpeed * Time.fixedDeltaTime));
+    }
+    public void OnCanvas()
+    {
+       canvas.SetActive(false);
+    moveSpeed = 1f;
     }
 }
