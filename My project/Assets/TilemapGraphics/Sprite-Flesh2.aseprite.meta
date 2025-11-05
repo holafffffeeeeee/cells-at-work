@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c62553f533324a848bdc80b5233bdce8
+guid: 6fce431fbff3e4e469e333ee6289d0d4
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638979318736449241
+  platformSettingsDirtyTick: 638979313790984852
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,7 +123,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Sprite-FleshWall
+  - name: Sprite-Flesh2
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -135,7 +135,7 @@ ScriptedImporter:
       y: 4
       width: 32
       height: 32
-    spriteID: 72df142d335796a41aedcd8e6ae5182f
+    spriteID: 8be68f1d728a766499b8a6153dd18c44
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -148,17 +148,17 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 92061524
+      value0: 1960835178
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: Sprite-FleshWall
+    name: Sprite-Flesh2
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Sprite-FleshWall
+    - name: Sprite-Flesh2
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -166,7 +166,7 @@ ScriptedImporter:
         y: 0
         width: 32
         height: 32
-      spriteId: 72df142d335796a41aedcd8e6ae5182f
+      spriteId: 8be68f1d728a766499b8a6153dd18c44
     linkedCells: []
     parentIndex: -1
   platformSettings:
