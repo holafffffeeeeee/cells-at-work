@@ -10,7 +10,7 @@ public class playercontoller : MonoBehaviour
    public GameObject canvas;
     private void Start()
     {
-        moveSpeed = 0f;
+      Time.timeScale = 0;
     }
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -31,6 +31,6 @@ public class playercontoller : MonoBehaviour
     public void OnCanvas()
     {
        canvas.SetActive(false);
-    moveSpeed = 5f;
+    Time.timeScale = 1;
     }
 }
