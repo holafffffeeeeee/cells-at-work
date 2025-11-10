@@ -8,6 +8,8 @@ public class playercontoller : MonoBehaviour
    private Vector2 move;
     private Rigidbody2D rb;
    public GameObject canvas;
+    public Camera cam;
+    public Vector2 mousePOS;
     private void Start()
     {
       Time.timeScale = 0;
@@ -24,9 +26,17 @@ public class playercontoller : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
       
     }
+    private void Update()
+    {
+       mousePOS = cam.ScreenToWorldPoint(Input.mousePosition);
+    }
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + move * (moveSpeed * Time.fixedDeltaTime));
+        Vector2 lookDir  = mousePOS - rb.position;
+
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = angle;
     }
     public void OnCanvas()
     {
