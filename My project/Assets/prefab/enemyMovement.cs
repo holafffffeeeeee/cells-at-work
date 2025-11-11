@@ -10,8 +10,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class enemyMovement : MonoBehaviour
 {
-
-
+   public playerManager playermanager;
+    
     public float monsterhealth = 10f;
 
 
@@ -32,14 +32,8 @@ public class enemyMovement : MonoBehaviour
 
     void Update()
     {
-        chasingPlayer = true;
 
-        if (chasingPlayer == true)
-        {
-            ChasePlayer();
-        }
-
-
+      // playermanager.players.
 
 
 
@@ -51,6 +45,13 @@ public class enemyMovement : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
+        {
+            Destroy(gameObject);
+        }
+    }
 
 }
 
