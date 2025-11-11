@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HeallthManager : MonoBehaviour
+public class HealthManager : MonoBehaviour
 {
     public Image healthBar;
     public float healthAmount = 100f;
@@ -15,7 +15,20 @@ public class HeallthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (healthAmount <= 0)
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
         
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            TakeDamage(20);
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Heal(5);
+        }
+
     }
 
     public void TakeDamage(float Damage)
