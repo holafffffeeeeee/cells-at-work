@@ -16,19 +16,19 @@ public class shooting : MonoBehaviour
         inputActions = new InputSystem_Actions();
     }
 
-    private void OnEnable()
-    {
-        // Enable the action map and register callback
-        inputActions.Player1.Attack.performed += Fire;
-        inputActions.Player1.Enable();
-    }
+    //private void OnEnable()
+    //{
+    //    // Enable the action map and register callback
+    //    inputActions.Player1.Attack.performed += Fire;
+    //    inputActions.Player1.Enable();
+    //}
 
-    private void OnDisable()
-    {
-        // Clean up when disabled
-        inputActions.Player1.Attack.performed -= Fire;
-        inputActions.Player1.Disable();
-    }
+    //private void OnDisable()
+    //{
+    //    // Clean up when disabled
+    //    inputActions.Player1.Attack.performed -= Fire;
+    //    inputActions.Player1.Disable();
+    //}
 
     public void Fire(InputAction.CallbackContext context)
     {
