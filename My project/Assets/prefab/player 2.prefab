@@ -46,6 +46,8 @@ GameObject:
   - component: {fileID: 2698970764754117410}
   - component: {fileID: 404778173103240105}
   - component: {fileID: 2351049207966287784}
+  - component: {fileID: 2022472500706896239}
+  - component: {fileID: 8555524736966308820}
   m_Layer: 7
   m_Name: player 2
   m_TagString: Untagged
@@ -307,6 +309,7 @@ MonoBehaviour:
   move: {x: 0, y: 0}
   aimdir: {x: 0, y: 0}
   mousePOS: {x: 0, y: 0}
+  useMouse: 0
 --- !u!114 &404778173103240105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,6 +362,32 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.41666666
+--- !u!114 &2022472500706896239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6172728388822986642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38cbe3675617bff4e821cd43a27fca3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+--- !u!114 &8555524736966308820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6172728388822986642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d97d3a89e93e36348a5085d2564dc9b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
 --- !u!1 &6951755344646536825
 GameObject:
   m_ObjectHideFlags: 0

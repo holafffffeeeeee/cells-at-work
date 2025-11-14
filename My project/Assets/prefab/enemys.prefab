@@ -104,12 +104,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playermanager: {fileID: 0}
   monsterhealth: 10
+  "po\xE4ngsystem": 0
+  idscript: {fileID: 6060629744983365576, guid: 835042c4d4385e84f8f2b0986a37de36, type: 3}
   speed: 2
+  id22: {fileID: 8555524736966308820, guid: a422f68cb15006d46bef8d93b55873fd, type: 3}
   pathPrefabs: []
   player: {fileID: 0}
+  destroy: 0
   chaseRange: 100
   attackRange: 1
   targetPosition: {x: 0, y: 0, z: 0}
+  manager: {fileID: 0}
 --- !u!50 &3530352716621243514
 Rigidbody2D:
   serializedVersion: 5

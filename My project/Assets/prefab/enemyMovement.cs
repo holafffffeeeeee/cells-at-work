@@ -11,22 +11,22 @@ public class enemyMovement : MonoBehaviour
 {
    public playerManager playermanager;
     
-    public float monsterhealth = 10f;
-
-
+public float monsterhealth = 1f;
+    public int poängsystem;
+    public id idscript;
     public float speed = 2f;
-
+    public id2 id22;
     public List<GameObject> pathPrefabs;
     public Transform player;               // Reference to the player
 
-
+    public bool destroy;
     public float chaseRange = 5f;          // How close the player has to be for the monster to chase
     public float attackRange = 1f;
     private Transform target;
 
     private bool chasingPlayer = true;    // Is the monster currently chasing the player?
     public Vector3 targetPosition;
-
+   public GameManager manager;
 
     private void Update()
     {
@@ -36,7 +36,11 @@ public class enemyMovement : MonoBehaviour
         FindClosestPlayer();
 
         if (target != null)
+        {
             ChasePlayer();
+        }
+            
+        poängsystem = id22.id = 2;
     }
 
     public void FindClosestPlayer()
@@ -77,8 +81,16 @@ public class enemyMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            Destroy(gameObject);
+            if (idscript.idValue == 1  && monsterhealth == 0 || poängsystem == 2 && monsterhealth == 0)
+            {
+                Destroy(gameObject);
+                idscript.idValue++;
+                poängsystem++;
+            }
+            manager.OnScoreZoneReached(idscript.idValue, id22.id);
         }
+        
+     
     }
 
 }
