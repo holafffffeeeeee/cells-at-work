@@ -51,7 +51,19 @@ MonoBehaviour:
   m_JoinBehavior: 0
   m_PlayerJoinedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3999301132046974644}
+        m_TargetAssemblyTypeName: playerManager, Assembly-CSharp
+        m_MethodName: onJoin
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_PlayerLeftEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -91,3 +103,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
   players: []
+  player2Prefab: {fileID: 6172728388822986642, guid: a422f68cb15006d46bef8d93b55873fd, type: 3}
+  pim: {fileID: 4420986764627427099}

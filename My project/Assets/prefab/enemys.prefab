@@ -102,11 +102,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1326192e25d6c45bebd4412731e290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playermanager: {fileID: 0}
   monsterhealth: 10
   speed: 2
   pathPrefabs: []
   player: {fileID: 0}
-  chaseRange: 5
+  chaseRange: 100
   attackRange: 1
   targetPosition: {x: 0, y: 0, z: 0}
 --- !u!50 &3530352716621243514
