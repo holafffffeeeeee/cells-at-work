@@ -1,10 +1,8 @@
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-    }
-
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public int shooterID;
+    public float damage = 1f;
 }

@@ -13,7 +13,7 @@ public class playertracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        player2 = enemyMovement.player;
+      
 
     }
 }

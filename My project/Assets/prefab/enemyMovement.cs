@@ -1,32 +1,17 @@
-
-
-
-
- using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections.Generic;
+
 public class enemyMovement : MonoBehaviour
 {
-   public playerManager playermanager;
-    
-public float monsterhealth = 1f;
-    public int poängsystem;
-    public id idscript;
-    public float speed = 2f;
-    public id2 id22;
-    public List<GameObject> pathPrefabs;
-    public Transform player;               // Reference to the player
+    public playerManager playermanager;
 
-    public bool destroy;
-    public float chaseRange = 5f;          // How close the player has to be for the monster to chase
-    public float attackRange = 1f;
+    public float monsterhealth = 1f;
+    public float speed = 2f;
+
+    public float chaseRange = 5f;
     private Transform target;
 
-    private bool chasingPlayer = true;    // Is the monster currently chasing the player?
-    public Vector3 targetPosition;
-   public GameManager manager;
+    public GameManager manager;
 
     private void Update()
     {
@@ -36,11 +21,7 @@ public float monsterhealth = 1f;
         FindClosestPlayer();
 
         if (target != null)
-        {
             ChasePlayer();
-        }
-            
-        poängsystem = id22.id = 2;
     }
 
     public void FindClosestPlayer()
@@ -60,7 +41,6 @@ public float monsterhealth = 1f;
             }
         }
 
-        // Only chase if within range
         if (closestPlayer != null && closestDistance <= chaseRange)
             target = closestPlayer;
         else
@@ -76,24 +56,21 @@ public float monsterhealth = 1f;
         );
     }
 
-  
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Bullet")
+        Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+        if (bullet == null) return;
+
+        // ---- apply damage ----
+        monsterhealth -= bullet.damage;
+
+        if (monsterhealth <= 0)
         {
-            if (idscript.idValue == 1  && monsterhealth == 0 || poängsystem == 2 && monsterhealth == 0)
-            {
-                Destroy(gameObject);
-                idscript.idValue++;
-                poängsystem++;
-            }
-            manager.OnScoreZoneReached(idscript.idValue, id22.id);
+            manager.OnScoreZoneReached(bullet.shooterID);
+            Destroy(gameObject);
         }
-        
-     
+
+        Destroy(collision.gameObject); // destroy bullet
     }
-
 }
-
-
 
