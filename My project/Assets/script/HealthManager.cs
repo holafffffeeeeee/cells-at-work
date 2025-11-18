@@ -18,6 +18,7 @@ public class HealthManager : MonoBehaviour
         if (healthAmount <= 0)
         {
             Application.LoadLevel(Application.loadedLevel);
+            gameObject.tag = "Player";
         }
         
         if (Input.GetKeyDown(KeyCode.Return))
