@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - BulletTag2
+  - Enemey
   layers:
   - Default
   - TransparentFX

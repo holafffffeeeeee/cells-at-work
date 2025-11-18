@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4308996686441241620}
   m_Layer: 0
   m_Name: enemys
-  m_TagString: Untagged
+  m_TagString: Enemey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,11 +102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1326192e25d6c45bebd4412731e290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playermanager: {fileID: 3999301132046974644, guid: e461334d10c54af4aa450863d6a4cd09, type: 3}
+  playermanager: {fileID: 0}
   monsterhealth: 1
   speed: 2
   chaseRange: 100
-  manager: {fileID: 352037087166941699, guid: b93209ba04d64fb48afc95767c5c423e, type: 3}
+  manager: {fileID: 0}
 --- !u!50 &518817390421066600
 Rigidbody2D:
   serializedVersion: 5
