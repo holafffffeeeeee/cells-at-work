@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class enemyMovement : MonoBehaviour
 {
     public playerManager playermanager;
-
+     public EnemySpawner enemySpawner;
     public float monsterhealth = 1f;
     public float speed = 2f;
 
@@ -66,6 +66,10 @@ public class enemyMovement : MonoBehaviour
 
         if (monsterhealth <= 0)
         {
+
+        
+            enemySpawner.ReportDead(gameObject);
+            
             manager.OnScoreZoneReached(bullet.shooterID);
             Destroy(gameObject);
         }
