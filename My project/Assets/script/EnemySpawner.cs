@@ -78,6 +78,7 @@ public class EnemySpawner : MonoBehaviour
         if(currWave == 5 )
         {
             ActiveEnemies = hardenemies;
+            Time.timeScale = 1;
         }
 
         GenerateEnemies();
