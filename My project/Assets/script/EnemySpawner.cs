@@ -19,7 +19,24 @@ public class EnemySpawner : MonoBehaviour
     public List<GameObject> spawnedEnemies = new List<GameObject>();
 
     public Transform[] spawnPoints;
-    private int spawnIndex = 0;
+    private int spawnIndex = 1;
+    [Header("Weapon Spawning")]
+    [SerializeField] public GameObject[] weaponPickupPrefabs;
+    [SerializeField] public Transform[] weaponSpawnPoints;
+    [SerializeField] private int bossWaveInterval = 3;
+
+    private int currentWave = 0;
+
+    public void SpawnWeaponPickups()
+    {
+        if (weaponPickupPrefabs.Length == 0 || weaponSpawnPoints.Length == 0) return;
+
+        foreach (Transform spawnPoint in weaponSpawnPoints)
+        {
+            int randomWeapon = Random.Range(0, weaponPickupPrefabs.Length);
+            Instantiate(weaponPickupPrefabs[randomWeapon], spawnPoint.position, Quaternion.identity);
+        }
+    }
 
     void Start()
     {
@@ -79,8 +96,16 @@ public class EnemySpawner : MonoBehaviour
         // Choose enemy difficulty set
         if (currWave < 5)
             ActiveEnemies = standardEnemies;
+       
         else
+
             ActiveEnemies = hardEnemies;
+        // Spawn weapons every boss wave (every 3 waves)
+        if (currWave % bossWaveInterval == 0 && currWave > 0)
+        {
+            SpawnWeaponPickups();
+        }
+
 
         // LEVELING RULE: waveValue = how many monsters per wave
         waveValue = currWave * 5;    // Wave 1 = 5 enemies, 2 = 10, 3 = 15...

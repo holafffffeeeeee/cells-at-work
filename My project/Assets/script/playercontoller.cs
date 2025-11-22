@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -59,4 +60,5 @@ public class playercontoller : MonoBehaviour
         mousePOS = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
 
     }
+  
 }
