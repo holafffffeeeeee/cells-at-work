@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.Design;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -25,7 +26,6 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] public Transform[] weaponSpawnPoints;
     [SerializeField] private int bossWaveInterval = 3;
 
-    private int currentWave = 0;
 
     public void SpawnWeaponPickups()
     {
@@ -95,11 +95,19 @@ public class EnemySpawner : MonoBehaviour
     {
         // Choose enemy difficulty set
         if (currWave < 5)
+
             ActiveEnemies = standardEnemies;
-       
-        else
+    else  
 
             ActiveEnemies = hardEnemies;
+            waveDuration = 10f;
+        
+       
+        
+
+           
+       
+        
         // Spawn weapons every boss wave (every 3 waves)
         if (currWave % bossWaveInterval == 0 && currWave > 0)
         {

@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c93ee6e71c56354dbecf384de6d5254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  moveSpeed: 5
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   move: {x: 0, y: 0}
   aimdir: {x: 0, y: 0}
@@ -433,6 +433,8 @@ MonoBehaviour:
   firePoint: {fileID: 3211886714908089806}
   bulletPrefab: {fileID: 4570523301200433127, guid: f5424e238e18f964d85fb7e60e9c1728, type: 3}
   bulletForce: 20
+  fireRate: 0.5
+  damage: 1
   shooterID: 2
 --- !u!58 &2351049207966287784
 CircleCollider2D:

@@ -3,12 +3,17 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
   
-     
+    
 
         public int scorePlayer1, scorePlayer2;
         public ScoreScript scoreTextleft, scoreTextright;
+  public GameObject ScoreTextleft, ScoreTextright;
 
-
+    private void Start()
+    {
+        ScoreTextright.SetActive(true);
+        ScoreTextleft.SetActive(true);
+    }
     public void OnScoreZoneReached(int shooterID)
     {
         if (shooterID == 1)
@@ -16,7 +21,7 @@ public class GameManager : MonoBehaviour
 
         if (shooterID == 2)
             scorePlayer2++;
-
+     
         UpdateScores();
     }
 

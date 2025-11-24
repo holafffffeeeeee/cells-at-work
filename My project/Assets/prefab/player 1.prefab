@@ -251,7 +251,7 @@ MonoBehaviour:
   move: {x: 0, y: 0}
   aimdir: {x: 0, y: 0}
   mousePOS: {x: 0, y: 0}
-  useMouse: 0
+  useMouse: 1
 --- !u!50 &1340031824340022537
 Rigidbody2D:
   serializedVersion: 5
@@ -295,6 +295,8 @@ MonoBehaviour:
   firePoint: {fileID: 5354998780159708654}
   bulletPrefab: {fileID: 4570523301200433127, guid: 5146e45dcbc4bf94bb88e326437f8669, type: 3}
   bulletForce: 20
+  fireRate: 0.5
+  damage: 1
   shooterID: 1
 --- !u!58 &2216365182631021839
 CircleCollider2D:
@@ -344,6 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e060b27ce9810e640a1334efd099317a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 4891343747899504682}
   healthBar: {fileID: 766698930037619912}
   healthAmount: 100
 --- !u!1 &892629948948512055

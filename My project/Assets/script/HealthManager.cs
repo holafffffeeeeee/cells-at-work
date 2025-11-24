@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
+    public GameObject health;
     public Image healthBar;
     public float healthAmount = 100f;
     
@@ -17,7 +18,8 @@ public class HealthManager : MonoBehaviour
     {
         if (healthAmount <= 0)
         {
-            Application.LoadLevel(Application.loadedLevel);
+              health.SetActive(false);
+            LevelManager.manager.GameOver();
             gameObject.tag = "Player";
         }
         

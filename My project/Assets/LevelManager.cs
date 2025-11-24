@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-
+public GameManager gameManager;
     public static LevelManager manager;
     public GameObject Deathscreen;
     public int score;
@@ -20,12 +20,16 @@ public class LevelManager : MonoBehaviour
     public void GameOver()
     {
         Deathscreen.SetActive(true);
-      
+      gameManager.ScoreTextleft.SetActive(false);
+        gameManager.ScoreTextright.SetActive(false);
+     
+
     }
 
     public void ReplayGame()
     {
         Deathscreen.SetActive(false);
+        Application.LoadLevel(Application.loadedLevel);
     }
    
 }

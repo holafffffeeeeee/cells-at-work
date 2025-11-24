@@ -13,6 +13,8 @@ public class playercontoller : MonoBehaviour
     public Vector2 aimdir;
     public Vector2 mousePOS;
     public bool useMouse;
+
+    
     private void Start()
     {
       //Time.timeScale = 0;
