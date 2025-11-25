@@ -3,10 +3,11 @@ using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
-    public GameObject health;
+    public GameObject health1,heath2;
     public Image healthBar;
     public float healthAmount = 100f;
-    
+
+   public bool isDead = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,29 +17,31 @@ public class HealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+    }
+    public void Revive()
+    {
+        isDead = false;
+        healthAmount = 100f;
+        healthBar.fillAmount = 1f;
+        gameObject.SetActive(true);
+    }
+
+    public void TakeDamage(float damage)
+    {
+        if (isDead) return;
+
+        healthAmount -= damage;
+        healthAmount = Mathf.Max(0, healthAmount);
+        healthBar.fillAmount = healthAmount / 100f;
+
         if (healthAmount <= 0)
         {
-              health.SetActive(false);
-            LevelManager.manager.GameOver();
-            gameObject.tag = "Player";
+            Die();
         }
-        
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            TakeDamage(20);
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Heal(5);
-        }
-
     }
 
-    public void TakeDamage(float Damage)
-    {
-        healthAmount -= Damage;
-        healthBar.fillAmount = healthAmount / 100f;
-    }
 
     public void Heal(float healingAmount)
     {
@@ -48,7 +51,18 @@ public class HealthManager : MonoBehaviour
         healthBar.fillAmount = healthAmount / 100f;
     }
 
+    public void Die()
+    {
+        if (isDead) return;
 
+        isDead = true;
+        gameObject.SetActive(false);
+
+        if (LevelManager.manager != null)
+        {
+            LevelManager.manager.OnPlayerDeath();
+        }
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemey")

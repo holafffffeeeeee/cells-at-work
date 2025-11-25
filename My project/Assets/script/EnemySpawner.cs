@@ -64,12 +64,16 @@ public class EnemySpawner : MonoBehaviour
         // When time is up AND all enemies are dead → next wave
         if (waveTimer <= 0f && spawnedEnemies.Count == 0)
         {
+         
             currWave++;
             GenerateWave();
         }
     }
+   
 
-    void SpawnEnemy()
+    
+        
+        void SpawnEnemy()
     {
         GameObject enemy = Instantiate(
             enemiesToSpawn[0],

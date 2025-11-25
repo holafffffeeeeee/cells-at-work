@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-  
-    
 
-        public int scorePlayer1, scorePlayer2;
-        public ScoreScript scoreTextleft, scoreTextright;
+
+
+    public int scorePlayer1, scorePlayer2, finalscore;
+    public ScoreScript scoreTextleft, scoreTextright, finalscoretoatal;
   public GameObject ScoreTextleft, ScoreTextright;
 
     private void Start()
@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
         if (shooterID == 2)
             scorePlayer2++;
      
+        finalscore = scorePlayer1 + scorePlayer2;
         UpdateScores();
     }
 
@@ -29,5 +30,6 @@ public class GameManager : MonoBehaviour
         {
             scoreTextleft.SetScore(scorePlayer1);
             scoreTextright.SetScore(scorePlayer2);
+       finalscoretoatal.finalscore(finalscore);
         }
  }

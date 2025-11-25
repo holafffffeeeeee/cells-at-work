@@ -160,7 +160,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7032564463763513299
 Transform:
   m_ObjectHideFlags: 0
@@ -485,6 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
+  finalScore: {fileID: 0}
 --- !u!114 &1775881593774744645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,6 +498,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e060b27ce9810e640a1334efd099317a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health1: {fileID: 75223502866980392, guid: 835042c4d4385e84f8f2b0986a37de36, type: 3}
+  heath2: {fileID: 6172728388822986642}
   healthBar: {fileID: 940909818373489191}
   healthAmount: 100
 --- !u!1 &6951755344646536825
