@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class shooting : MonoBehaviour
 {
+    public AudioSource Audioplayer;
+    public AudioClip ShootSound; 
     [Header("Shooting Settings")]
     [SerializeField] private Transform firePoint2;
     [SerializeField] private Transform firePoint;
@@ -25,6 +27,8 @@ public class shooting : MonoBehaviour
             Debug.LogError("Missing firePoint or bulletPrefab!");
             return;
         }
+
+        Audioplayer.PlayOneShot(ShootSound);
 
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         mouseWorldPos.z = 0;
