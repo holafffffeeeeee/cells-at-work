@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
+using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class playercontoller : MonoBehaviour
 {
@@ -9,12 +12,13 @@ public class playercontoller : MonoBehaviour
     public InputActionAsset inputActions;
     public Vector2 move;
     private Rigidbody2D rb;
-
+    public playerManager PlayerManager;
     public Vector2 aimdir;
     public Vector2 mousePOS;
     public bool useMouse;
+    public bool TurnOnCanvas = true;
 
-    
+  public  GameObject pannel;
     private void Start()
     {
       //Time.timeScale = 0;
@@ -62,5 +66,8 @@ public class playercontoller : MonoBehaviour
         mousePOS = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
 
     }
-  
+     public void canvas()
+    {
+        pannel.SetActive(false);
+    }
 }

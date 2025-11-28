@@ -415,9 +415,12 @@ MonoBehaviour:
   moveSpeed: 5
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   move: {x: 0, y: 0}
+  PlayerManager: {fileID: 0}
   aimdir: {x: 0, y: 0}
   mousePOS: {x: 0, y: 0}
   useMouse: 0
+  TurnOnCanvas: 0
+  pannel: {fileID: 0}
 --- !u!114 &404778173103240105
 MonoBehaviour:
   m_ObjectHideFlags: 0
