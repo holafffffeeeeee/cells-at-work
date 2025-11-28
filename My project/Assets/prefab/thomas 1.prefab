@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playermanager: {fileID: 0}
   enemySpawner: {fileID: 0}
-  monsterhealth: 10
+  monsterhealth: 12
   speed: 2
   chaseRange: 100
   manager: {fileID: 0}

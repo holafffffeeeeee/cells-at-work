@@ -6755,10 +6755,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1185268407}
     - target: {fileID: 4485513156002701045, guid: d35e46038394f9440adca692c287277e, type: 3}
-      propertyPath: monsterhealth
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4485513156002701045, guid: d35e46038394f9440adca692c287277e, type: 3}
       propertyPath: playermanager
       value: 
       objectReference: {fileID: 1273214011}
@@ -6985,9 +6981,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e060b27ce9810e640a1334efd099317a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 785467519}
-  healthAmount: 100
-  isDead: 0
 --- !u!1 &442867725
 GameObject:
   m_ObjectHideFlags: 0
@@ -9443,7 +9436,7 @@ TilemapCollider2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 1
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -10162,7 +10155,7 @@ MonoBehaviour:
     cost: 8
   ActiveEnemies: []
   revivebutton: {fileID: 521071772}
-  currWave: 5
+  currWave: 1
   waveValue: 5
   waveDuration: 10
   enemiesToSpawn: []

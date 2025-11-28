@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: jetpowerdwatercannon
   weaponIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  damage: 50
+  damage: 5
   fireRate: 0.1
   bulletSpeed: 20
   bulletPrefab: {fileID: 4570523301200433127, guid: 5146e45dcbc4bf94bb88e326437f8669, type: 3}
