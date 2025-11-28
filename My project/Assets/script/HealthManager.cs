@@ -22,10 +22,17 @@ public class HealthManager : MonoBehaviour
     }
     public void Revive()
     {
-        isDead = false;
-        healthAmount = 100f;
+      
+       
+         healthAmount = 100f;
         healthBar.fillAmount = 1f;
-        gameObject.SetActive(true);
+        health1.SetActive(true);
+        heath2.SetActive(true);
+        heath2.GetComponent<HealthManager>().isDead = false;
+     heath2.GetComponent<HealthManager>(). healthAmount += 100f;
+            heath2.GetComponent<HealthManager>().healthBar.fillAmount = 1f;
+        heath2.GetComponent<HealthManager>().gameObject.SetActive(true);
+    
     }
 
     public void TakeDamage(float damage)
@@ -62,6 +69,7 @@ public class HealthManager : MonoBehaviour
         {
             LevelManager.manager.OnPlayerDeath();
         }
+       
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

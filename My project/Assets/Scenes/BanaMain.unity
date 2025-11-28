@@ -7158,7 +7158,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &521071773
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10163,7 +10163,7 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 1534787306}
     cost: 8
   ActiveEnemies: []
-  currWave: 5
+  currWave: 1
   waveValue: 5
   waveDuration: 10
   enemiesToSpawn: []

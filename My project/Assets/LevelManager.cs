@@ -61,11 +61,5 @@ public class LevelManager : MonoBehaviour
  
 
     
-    public void OnWaveBeaten()
-    {
-       
-            healthManager.Revive();
-          
-        
-    }
+ 
 }
