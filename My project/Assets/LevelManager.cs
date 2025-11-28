@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 public class LevelManager : MonoBehaviour
 {
-   public HealthManager healthManager;
+
     public playerManager PlayerManager;
     public EnemySpawner EnemySpawner;
     public GameManager gameManager;
@@ -47,19 +48,22 @@ public class LevelManager : MonoBehaviour
         {
             GameOver();
         }
-        if (EnemySpawner.currWave == 6)
-        {
-            revivebutton.SetActive(true);
-
-        }
+      
     }
     public void join(PlayerInput player)
     {
         alivePlayers++;
 
     }
- 
 
-    
+    public void reviveplayers()
+    {
+        for (int i = 0; i < PlayerManager.players.Count; i++) 
+        {
+             Health health = PlayerManager.players[i].GetComponent<Health>();
+             health.Revive();
+        }
+        revivebutton.SetActive(false);
+    }
  
 }

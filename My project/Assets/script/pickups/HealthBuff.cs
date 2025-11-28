@@ -3,12 +3,12 @@ using UnityEngine;
 [CreateAssetMenuAttribute(menuName = "Powerups/healthBuff")]
 public class HealthBuff : PowerupEffect
 {
-    HealthManager hm;
+    Health hm;
 
     public float amount ;
     public override void apply(GameObject taget)
     {
-        HealthManager hm = taget.GetComponent<HealthManager>();
+        Health hm = taget.GetComponent<Health>();
         if (hm != null)
         {
             hm.Heal(amount);

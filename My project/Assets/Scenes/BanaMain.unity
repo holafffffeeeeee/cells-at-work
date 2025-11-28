@@ -6985,8 +6985,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e060b27ce9810e640a1334efd099317a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health1: {fileID: 0}
-  heath2: {fileID: 0}
   healthBar: {fileID: 785467519}
   healthAmount: 100
   isDead: 0
@@ -7158,7 +7156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &521071773
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7225,7 +7223,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1228477746}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: OnWaveBeaten
+        m_MethodName: reviveplayers
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10163,7 +10161,8 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 1534787306}
     cost: 8
   ActiveEnemies: []
-  currWave: 1
+  revivebutton: {fileID: 521071772}
+  currWave: 5
   waveValue: 5
   waveDuration: 10
   enemiesToSpawn: []
@@ -10224,7 +10223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82c6e833c28dd524aaccd845eb4bd6c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthManager: {fileID: 2707241806948256344, guid: 835042c4d4385e84f8f2b0986a37de36, type: 3}
   PlayerManager: {fileID: 1273214011}
   EnemySpawner: {fileID: 1185268407}
   gameManager: {fileID: 1231350479}

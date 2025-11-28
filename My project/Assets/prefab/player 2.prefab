@@ -153,8 +153,8 @@ GameObject:
   - component: {fileID: 404778173103240105}
   - component: {fileID: 2351049207966287784}
   - component: {fileID: 2022472500706896239}
-  - component: {fileID: 1775881593774744645}
   - component: {fileID: 8181923733461059849}
+  - component: {fileID: 9200739451072388564}
   m_Layer: 7
   m_Name: player 2
   m_TagString: Player
@@ -489,23 +489,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 0}
   finalScore: {fileID: 0}
---- !u!114 &1775881593774744645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6172728388822986642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e060b27ce9810e640a1334efd099317a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health1: {fileID: 75223502866980392, guid: 835042c4d4385e84f8f2b0986a37de36, type: 3}
-  heath2: {fileID: 6172728388822986642}
-  healthBar: {fileID: 940909818373489191}
-  healthAmount: 300
-  isDead: 0
 --- !u!82 &8181923733461059849
 AudioSource:
   m_ObjectHideFlags: 0
@@ -603,6 +586,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9200739451072388564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6172728388822986642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99770ed23b85d4f41ba81b62e90050ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 4099942189782510787}
+  Shooting: {fileID: 404778173103240105}
+  healthBar: {fileID: 940909818373489191}
+  healthAmount: 100
+  PlayerCollider: {fileID: 2351049207966287784}
+  isDead: 0
 --- !u!1 &6951755344646536825
 GameObject:
   m_ObjectHideFlags: 0

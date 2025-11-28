@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour
     public List<Enemy> hardEnemies = new List<Enemy>();
     public List<Enemy> ActiveEnemies = new List<Enemy>();
 
+    public GameObject revivebutton;
     public int currWave = 1;
     public int waveValue;        // = number of enemies
     public float waveDuration = 10f;
@@ -64,9 +65,14 @@ public class EnemySpawner : MonoBehaviour
         // When time is up AND all enemies are dead → next wave
         if (waveTimer <= 0f && spawnedEnemies.Count == 0)
         {
-         
+           
             currWave++;
             GenerateWave();
+            if (currWave == 6)
+            {
+                revivebutton.SetActive(true);
+
+            }
         }
     }
    
