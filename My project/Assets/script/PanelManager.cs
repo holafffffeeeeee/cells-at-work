@@ -16,6 +16,7 @@ public class PanelManager : MonoBehaviour
         if (panel != null)
         {
             panel.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
@@ -36,6 +37,7 @@ public class PanelManager : MonoBehaviour
         if (panel != null)
         {
             panel.SetActive(!panel.activeSelf);
+          
         }
     }
 }

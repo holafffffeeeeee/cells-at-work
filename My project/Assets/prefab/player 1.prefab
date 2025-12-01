@@ -317,6 +317,7 @@ MonoBehaviour:
   bulletForce: 20
   fireRate: 0.5
   damage: 1
+  Player: {fileID: 3936849752920240784}
   shooterID: 1
 --- !u!58 &2216365182631021839
 CircleCollider2D:
@@ -888,9 +889,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: QuitGame
+      - m_Target: {fileID: 3936849752920240784}
+        m_TargetAssemblyTypeName: playercontoller, Assembly-CSharp
+        m_MethodName: OnApplicationQuit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

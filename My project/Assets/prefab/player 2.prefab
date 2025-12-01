@@ -415,7 +415,7 @@ MonoBehaviour:
   moveSpeed: 5
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   move: {x: 0, y: 0}
-  PlayerManager: {fileID: 0}
+  PlayerManager: {fileID: 3999301132046974644, guid: e461334d10c54af4aa450863d6a4cd09, type: 3}
   aimdir: {x: 0, y: 0}
   mousePOS: {x: 0, y: 0}
   useMouse: 0
@@ -441,6 +441,7 @@ MonoBehaviour:
   bulletForce: 20
   fireRate: 0.5
   damage: 1
+  Player: {fileID: 2698970764754117410}
   shooterID: 2
 --- !u!58 &2351049207966287784
 CircleCollider2D:

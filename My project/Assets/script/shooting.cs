@@ -14,7 +14,7 @@ public class shooting : MonoBehaviour
     [SerializeField] private float fireRate = 0.5f;
     [SerializeField] private float damage = 1f;
     private float nextFireTime = 0f;
-
+    public playercontoller Player;
     public int shooterID;  // 1 or 2
     public void Fire(InputAction.CallbackContext context)
     {
@@ -30,12 +30,12 @@ public class shooting : MonoBehaviour
 
         Audioplayer.PlayOneShot(ShootSound);
 
-        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        /*Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         mouseWorldPos.z = 0;
 
         Vector2 direction = (mouseWorldPos - firePoint.position).normalized;
-
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        */
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
@@ -45,7 +45,7 @@ public class shooting : MonoBehaviour
 
         if (rb != null)
         {
-            rb.AddForce(direction * bulletForce, ForceMode2D.Impulse);
+            rb.AddForce(Player.aimdir * bulletForce, ForceMode2D.Impulse);
         }
 
         nextFireTime = Time.time + fireRate;

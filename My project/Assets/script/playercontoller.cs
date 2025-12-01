@@ -48,6 +48,7 @@ public class playercontoller : MonoBehaviour
         }
         aimdir.Normalize();
         transform.up = aimdir;
+        Debug.DrawRay(transform.position, aimdir * 5f);
         //float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
         //rb.rotation = angle;
     }
@@ -69,5 +70,10 @@ public class playercontoller : MonoBehaviour
      public void canvas()
     {
         pannel.SetActive(false);
+        Time.timeScale = 1.0f;
+    }
+    public void OnApplicationQuit()
+    {
+        Application.Quit();
     }
 }
