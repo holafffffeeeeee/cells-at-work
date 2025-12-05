@@ -7,6 +7,7 @@ public class shooting : MonoBehaviour
     public AudioClip ShootSound; 
     [Header("Shooting Settings")]
     [SerializeField] private Transform firePoint2;
+    [SerializeField] private Transform firePoint3;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float bulletForce = 20f;
@@ -16,6 +17,7 @@ public class shooting : MonoBehaviour
     private float nextFireTime = 0f;
     public playercontoller Player;
     public int shooterID;  // 1 or 2
+   public bool ShotgunState;
     public void Fire(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
@@ -36,8 +38,30 @@ public class shooting : MonoBehaviour
         Vector2 direction = (mouseWorldPos - firePoint.position).normalized;
         */
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
+        if(ShotgunState == true)
+        {
+        GameObject bullet1 = Instantiate(bulletPrefab, firePoint2.position, transform.rotation);
+        GameObject bullet2 = Instantiate(bulletPrefab, firePoint3.position, transform.rotation);
+            GameObject bullet3 = Instantiate(bulletPrefab, firePoint.position, transform.rotation);
+            Rigidbody2D rb1 = bullet1.GetComponent<Rigidbody2D>();
+            Rigidbody2D rb2 = bullet2.GetComponent<Rigidbody2D>();
+            Rigidbody2D rb3 = bullet2.GetComponent<Rigidbody2D>();
+            rb1.AddForce(Player.aimdir * bulletForce, ForceMode2D.Impulse);
+            rb2.AddForce(Player.aimdir * bulletForce, ForceMode2D.Impulse);
+            rb2.AddForce(Player.aimdir * bulletForce, ForceMode2D.Impulse);
+          
+           if(ShotgunState == true)
+            {
+                Bullet bulletScript2 = bullet.GetComponent<Bullet>();
+                bulletScript2.shooterID = shooterID;
+                bulletScript2.damage = damage;
+
+            }
+        }
+       
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+      
 
         Bullet bulletScript = bullet.GetComponent<Bullet>();
         bulletScript.shooterID = shooterID;

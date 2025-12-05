@@ -57,8 +57,11 @@ public class playercontoller : MonoBehaviour
     {
       useMouse = false;
      
-        aimdir = context.ReadValue<Vector2>();
-   
+      Vector2 aimínput = context.ReadValue<Vector2>();
+        if (aimínput.magnitude > 0.1f)
+        {
+            aimdir =context.ReadValue<Vector2>();
+        }
     }
     public void onUpdatelookTarget(InputAction.CallbackContext context)
     {
