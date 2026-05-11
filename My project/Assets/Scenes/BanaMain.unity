@@ -408,9 +408,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.9528302, g: 0, b: 0, a: 1}
+    m_PressedColor: {r: 0.6981132, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 1, g: 0, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -430,9 +430,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 143058943}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1273214011}
         m_TargetAssemblyTypeName: playerManager, Assembly-CSharp
         m_MethodName: OnCanvas
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1684373176047834552, guid: 835042c4d4385e84f8f2b0986a37de36, type: 3}
+        m_TargetAssemblyTypeName: PanelManager, Assembly-CSharp
+        m_MethodName: OnDisable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11930,7 +11954,7 @@ MonoBehaviour:
     cost: 8
   ActiveEnemies: []
   revivebutton: {fileID: 521071772}
-  currWave: 5
+  currWave: 1
   waveValue: 5
   waveDuration: 10
   enemiesToSpawn: []
@@ -12125,7 +12149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 143058941}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1252184581
@@ -13516,17 +13540,61 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2904443153207149193, guid: 3768b58140d7f064abceeee49a37b6c0, type: 3}
-      propertyPath: m_MaxPlayerCount
-      value: 2
+      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904443153207149193, guid: 3768b58140d7f064abceeee49a37b6c0, type: 3}
+      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904443153207149193, guid: 3768b58140d7f064abceeee49a37b6c0, type: 3}
+      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2904443153207149193, guid: 3768b58140d7f064abceeee49a37b6c0, type: 3}
       propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1228477746}
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904443153207149193, guid: 3768b58140d7f064abceeee49a37b6c0, type: 3}
+      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1273214011}
+    - target: {fileID: 2904443153207149193, guid: 3768b58140d7f064abceeee49a37b6c0, type: 3}
+      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904443153207149193, guid: 3768b58140d7f064abceeee49a37b6c0, type: 3}
+      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904443153207149193, guid: 3768b58140d7f064abceeee49a37b6c0, type: 3}
+      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904443153207149193, guid: 3768b58140d7f064abceeee49a37b6c0, type: 3}
+      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: OnCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904443153207149193, guid: 3768b58140d7f064abceeee49a37b6c0, type: 3}
+      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: playerManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904443153207149193, guid: 3768b58140d7f064abceeee49a37b6c0, type: 3}
+      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: playerManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904443153207149193, guid: 3768b58140d7f064abceeee49a37b6c0, type: 3}
+      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904443153207149193, guid: 3768b58140d7f064abceeee49a37b6c0, type: 3}
+      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3874066904424628415, guid: 3768b58140d7f064abceeee49a37b6c0, type: 3}
       propertyPath: canvas
       value: 
-      objectReference: {fileID: 126325257}
+      objectReference: {fileID: 75223502866980392, guid: 835042c4d4385e84f8f2b0986a37de36, type: 3}
     - target: {fileID: 6706252297981821615, guid: 3768b58140d7f064abceeee49a37b6c0, type: 3}
       propertyPath: m_Name
       value: player manager

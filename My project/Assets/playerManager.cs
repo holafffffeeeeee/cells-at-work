@@ -24,7 +24,7 @@ public class playerManager : MonoBehaviour
     {
       
     }
-    public void OnCanvas()
+    public void OnCanvas(PlayerInput player)
     {
         canvas.SetActive(false);
         Time.timeScale = 1;

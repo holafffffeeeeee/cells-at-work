@@ -20,7 +20,7 @@ public class PanelManager : MonoBehaviour
         }
     }
 
-    private void OnEnable()
+  public void OnEnable()
     {
         inputActions.Player.Enable();
         inputActions.Player.Interact.performed += OnOpenPanel;
